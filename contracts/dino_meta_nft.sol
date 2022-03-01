@@ -31,7 +31,7 @@ contract DinoClub is ERC721Enumerable, Ownable {
         setNotRevealedURI(initNotRevealedUri);
     }
 
-    function mintDinoClub(uint256 tokenQuantity) public payable {
+    function mintDinoMonster(uint256 tokenQuantity) public payable {
         require(
             totalSupply() + tokenQuantity <= MAX_SUPPLY,
             "Sale would exceed max supply"
@@ -47,10 +47,10 @@ contract DinoClub is ERC721Enumerable, Ownable {
         );
         require(tokenQuantity <= maxMint, "Can only mint 1 tokens at a time");
 
-        _mintDinoClub(tokenQuantity);
+        _mintDinoMonster(tokenQuantity);
     }
 
-    function _mintDinoClub(uint256 tokenQuantity) internal {
+    function _mintDinoMonster(uint256 tokenQuantity) internal {
         for (uint256 i = 0; i < tokenQuantity; i++) {
             uint256 mintIndex = totalSupply();
             if (totalSupply() < MAX_SUPPLY) {
