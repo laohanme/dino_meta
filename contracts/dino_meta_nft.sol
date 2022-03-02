@@ -14,7 +14,7 @@ contract DinoClub is ERC721Enumerable, Ownable {
 
     // Constants
     uint256 public constant MAX_SUPPLY = 10000;
-    uint256 public mintPrice = 0.001 ether;
+    uint256 public mintPrice = 0.1 ether;
     uint256 public maxBalance = 100;
     uint256 public maxMint = 1;
 
